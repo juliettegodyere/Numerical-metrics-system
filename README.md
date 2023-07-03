@@ -22,11 +22,11 @@ This is a Java application exposing 5 REST APIs. The purpose of this application
 - CMD
 
 ## Features Implementation and endpoints
-- Retrieves a list of metrics. the name of the system is required. The name of the metric, and the from and to params are optional - GET /metrics?system = "Sales performance metrics"
-- Retrieve a single metric by id - GET /metrics/{id}
-- Create a new metric, with a default value of 1, and a default date of the current date/time - POST /metrics
-- Updates the specified metric with the supplied metric. If the value is not supplied, the existing value is incremented by 1. - PUT /metrics/{id}
-- Retrieves a metric summary - GET /metricsummary
+- Retrieves a list of metrics. The name of the system is required. The name of the metric, and the from and to params are optional - `GET /metrics?system = "Sales performance metrics"`
+- Retrieve a single metric by id - `GET /metrics/{id}`
+- Create a new metric, with a default value of 1, and a default date of the current date/time - `POST /metrics`
+- Updates the specified metric with the supplied metric. If the value is not supplied, the existing value is incremented by 1. - `PUT /metrics/{id}`
+- Retrieves a metric summary. The name of the system is required. The name of the metric, and the from and to params are optional- `GET /metricsummary?system = "Sales performance metrics"`
 
 ## How to run the application from the Commandline
 ### Option 1
