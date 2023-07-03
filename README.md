@@ -1,2 +1,61 @@
-# Numerical-metrics-system
-This is a Java application exposing a REST API. The purpose of this application will be to record numerical metric values. Each metric is defined by a name and records a count at a specific time. This service will be used by other applications to record and report on their metrics.
+# Numerical Metrics System
+
+## Description
+This is a Java application exposing 5 REST APIs. The purpose of this application will be to record numerical metric values. Each metric is defined by a name and records a count at a specific time. This service will be used by other applications to record and report on their metrics.
+
+## Terminologies used
+- Spring Boot - 3.1.1 RELEASE
+- JDK - 1.8 or later
+- Spring Framework - 6.0 RELEASE
+- Hibernate - 6
+- Spring Data JPA - 2+
+
+## Dependencies
+- Java 17
+- MySQL
+- Maven 3.2+
+
+## Optional tools to aid testing
+- Postman
+- Spring Tool Suite (STS)
+- MySQL Workbench
+- CMD
+
+## Features Implementation and endpoints
+- Retrieves a list of metrics. the name of the system is required. The name of the metric, and the from and to params are optional - GET /metrics?system = "Sales performance metrics"
+- Retrieve a single metric by id - GET /metrics/{id}
+- Create a new metric, with a default value of 1, and a default date of the current date/time - POST /metrics
+- Updates the specified metric with the supplied metric. If the value is not supplied, the existing value is incremented by 1. - PUT /metrics/{id}
+- Retrieves a metric summary - GET /metricsummary
+
+## How to run the application from the Commandline
+### Option 1
+#### ```Use Java -jar```
+- Clone the application
+- cd numeric-metrics-application/target
+- run ``` java -jar metrics-application-0.01-SNAPSHOT ```
+- The application will run on port 8080
+
+### Option 2
+#### User Spring Maven plugin ```mvn spring-boot:run```
+- Clone the application 
+- cd numeric-metrics-application
+- Run ```mvn spring-boot:run ``` **Note:** Use this command if you do not have Maven installed on your system.
+- Run ``` mvnw spring-boot:run ``` **Note:** Use this command if you do not have Maven installed on your system. Springboot will automatically install the Apache Maven
+- Run ``` mvn - Dmaven.test.skip=true spring-boot:run ``` **Note:** Use this command if you have Maven installed and you want to skip Jnit test cases
+- The application will run on port 8080
+
+## Completed Features
+- Exception handling
+- Unit tests
+- Integration tests
+
+## Ongoing Features
+- API-key authentication
+- Consuming relevant events on a message channel
+- Containerisation
+  > The Metrics application will communicate with a token-based authentication microservice via HTTP or an event-driven service like Kafka. The application utilizes Spring security and JWT. These microservices will be run on docker containers.
+
+
+
+
