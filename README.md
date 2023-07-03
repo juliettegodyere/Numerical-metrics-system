@@ -30,7 +30,7 @@ This is a Java application exposing 5 REST APIs. The purpose of this application
 
 ## How to run the application from the Commandline
 
-**Before the application is run, change the database username and password in the `application.properties` file to use your own details**
+**Before running the application, change the database username and password in the `application.properties` file to use your own details**
 ```spring.datasource.username={YOUR_USERNAME}```
 ```spring.datasource.password={YOUR_PASSWORD}```
 
