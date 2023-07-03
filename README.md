@@ -22,23 +22,28 @@ This is a Java application exposing 5 REST APIs. The purpose of this application
 - CMD
 
 ## Features Implementation and endpoints
-- Retrieves a list of metrics. The name of the system is required. The name of the metric, and the from and to params are optional - `GET /metrics?system = "Sales performance metrics"`
+- Retrieves a list of metrics. The name of the system is required. The name of the metric, and the from and to params are optional - `GET /metrics?system_name = "Sales performance metrics"`. An example of the complete params `http://localhost:8080/metrics?system_name=Sales performance metrics&metric_name=Email reply rate&from=1688329904112&to=1688329922632`. **Note:** **Change the details to reflect the information that you have on the database.*
 - Retrieve a single metric by id - `GET /metrics/{id}`
 - Create a new metric, with a default value of 1, and a default date of the current date/time - `POST /metrics`
 - Updates the specified metric with the supplied metric. If the value is not supplied, the existing value is incremented by 1. - `PUT /metrics/{id}`
-- Retrieves a metric summary. The name of the system is required. The name of the metric, and the from and to params are optional- `GET /metricsummary?system = "Sales performance metrics"`
+- Retrieves a metric summary. The name of the system is required. The name of the metric, and the from and to params are optional- `GET /metricsummary?system_name=Sales performance metrics&metric_name=Email reply rate&from=1688329904112&to=1688329922632`. **Note:** **Change the details to reflect the information that you have on the database.*
 
 ## How to run the application from the Commandline
+
+**Before the application is run, change the database username and password in the `application.properties` file to use your own details**
+```spring.datasource.username={YOUR_USERNAME}```
+```spring.datasource.password={YOUR_PASSWORD}```
+
 ### Option 1
 #### ```Use Java -jar```
-- Clone the application
+- Clone the application `https://github.com/juliettegodyere/Numerical-metrics-system.git`
 - cd numeric-metrics-application/target
 - run ``` java -jar metrics-application-0.01-SNAPSHOT ```
 - The application will run on port 8080
 
 ### Option 2
 #### User Spring Maven plugin ```mvn spring-boot:run```
-- Clone the application 
+- Clone the application `https://github.com/juliettegodyere/Numerical-metrics-system.git`
 - cd numeric-metrics-application
 - Run ```mvn spring-boot:run ``` **Note:** Use this command if you do not have Maven installed on your system.
 - Run ``` mvnw spring-boot:run ``` **Note:** Use this command if you do not have Maven installed on your system. Springboot will automatically install the Apache Maven
