@@ -35,19 +35,19 @@ This is a Java application exposing 5 REST APIs. The purpose of this application
 ```spring.datasource.password={YOUR_PASSWORD}```
 
 ### Option 1
-#### ```Use Java -jar```
-- Clone the application `https://github.com/juliettegodyere/Numerical-metrics-system.git`
-- cd numeric-metrics-application/target
-- run ``` java -jar metrics-application-0.01-SNAPSHOT ```
-- The application will run on port 8080
-
-### Option 2
 #### User Spring Maven plugin ```mvn spring-boot:run```
 - Clone the application `https://github.com/juliettegodyere/Numerical-metrics-system.git`
-- cd numeric-metrics-application
+- `cd Numerical-metrics-system`
 - Run ```mvn spring-boot:run ``` **Note:** Use this command if you do not have Maven installed on your system.
 - Run ``` mvnw spring-boot:run ``` **Note:** Use this command if you do not have Maven installed on your system. Springboot will automatically install the Apache Maven
 - Run ``` mvn - Dmaven.test.skip=true spring-boot:run ``` **Note:** Use this command if you have Maven installed and you want to skip Jnit test cases
+- The application will run on port 8080
+
+### Option 1
+#### ``` Import the Code into Elipse```
+- Clone the application `https://github.com/juliettegodyere/Numerical-metrics-system.git`
+- `cd numeric-metrics-application/target`
+- run the application using on elipse. 
 - The application will run on port 8080
 
 ## Completed Features
