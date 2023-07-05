@@ -54,6 +54,7 @@ This is a Java application exposing 5 REST APIs. The purpose of this application
 - Exception handling
 - Unit tests
 - Integration tests
+- Logging
 
 ## Ongoing Features
 - API-key authentication
