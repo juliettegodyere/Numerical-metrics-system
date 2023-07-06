@@ -46,9 +46,7 @@ This is a Java application exposing 5 REST APIs. The purpose of this application
 ### Option 1
 #### ``` Import the Code into Elipse```
 - Clone the application `https://github.com/juliettegodyere/Numerical-metrics-system.git`
-- `cd numeric-metrics-application/target`
-- run the application using on elipse. 
-- The application will run on port 8080
+- On the Project Explorer side menu, right-click on Numerical-metrics-system.git and select `Run As` then `Java Application`
 
 ## Completed Features
 - Exception handling
